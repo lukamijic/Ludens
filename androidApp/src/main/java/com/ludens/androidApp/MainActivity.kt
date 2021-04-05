@@ -1,6 +1,6 @@
 package com.ludens.androidApp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
 import com.ludens.shared.Greeting
 import android.widget.TextView
@@ -9,7 +9,7 @@ fun greet(): String {
     return Greeting().greeting()
 }
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

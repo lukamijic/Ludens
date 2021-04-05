@@ -4,7 +4,7 @@ object Versions {
     const val compileSdk = 30
 
     const val kotlin = "1.4.30"
-    const val koin = "3.0.1-beta-2"
+    const val koin = "3.0.0-alpha-4"
     const val ktor = "1.5.2"
     const val settings = "0.7.4"
 }
