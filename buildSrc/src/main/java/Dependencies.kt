@@ -3,8 +3,8 @@ object Versions {
     const val targetSdk = 30
     const val compileSdk = 30
 
-    const val kotlin = "1.4.30"
-    const val koin = "3.0.0-alpha-4"
+    const val kotlin = "1.4.32"
+    const val koin = "3.0.1-beta-2"
     const val ktor = "1.5.2"
     const val settings = "0.7.4"
 }
@@ -12,8 +12,8 @@ object Versions {
 object Dependencies {
 
     object Koin {
-        const val core = "org.koin:koin-core:${Versions.koin}"
-        const val androidViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
+        const val core = "io.insert-koin:koin-core:${Versions.koin}"
+        const val android = "io.insert-koin:koin-android:${Versions.koin}"
     }
 
     object Coroutines {

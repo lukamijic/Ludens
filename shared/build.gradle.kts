@@ -47,7 +47,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(Dependencies.Koin.core)
-                implementation(Dependencies.Koin.androidViewModel)
+                implementation(Dependencies.Koin.android)
 
                 implementation(Dependencies.timber)
 
