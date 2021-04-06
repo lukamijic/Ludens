@@ -3,6 +3,15 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    kotlin("android.extensions")
+    id("kotlinx-serialization")
+}
+
+repositories {
+    gradlePluginPortal()
+    google()
+    jcenter()
+    mavenCentral()
 }
 
 kotlin {
@@ -15,35 +24,64 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Dependencies.Coroutines.core)
+                implementation(Dependencies.Koin.core)
+
+                implementation(Dependencies.Ktor.core)
+                implementation(Dependencies.Ktor.serialization)
+                implementation(Dependencies.Ktor.logging)
+
+                implementation(Dependencies.UserPreferences.settings)
+                implementation(Dependencies.UserPreferences.settingsNoArg)
+            }
+        }
+
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
+                implementation(Dependencies.Test.Kotlin.common)
+                implementation(Dependencies.Test.Kotlin.annotations)
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation("com.google.android.material:material:1.2.1")
+                implementation(Dependencies.Koin.core)
+                implementation(Dependencies.Koin.android)
+
+                implementation(Dependencies.timber)
+
+                implementation(Dependencies.Ktor.android)
             }
         }
-        val androidTest by getting {
+        val iosMain by getting {
             dependencies {
-                implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.13")
+                implementation(Dependencies.Koin.core)
+                implementation(Dependencies.Ktor.ios)
             }
         }
-        val iosMain by getting
-        val iosTest by getting
     }
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(Versions.compileSdk)
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(29)
+        minSdkVersion(Versions.minSdk)
+        targetSdkVersion(Versions.targetSdk)
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        getByName("debug") {
+            versionNameSuffix = "-debug"
+        }
+
+        getByName("release") {
+            isMinifyEnabled = true
+            consumerProguardFiles("shared-proguard-rules.pro")
+        }
     }
 }
 
