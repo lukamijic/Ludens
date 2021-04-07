@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/overshoot_interpolator">
+
+    <!-- All values depend on each other so it does not make sense to put them in values xml-->
+    <translate
+        android:duration="50"
+        android:fromXDelta="0%p"
+        android:startOffset="100"
+        android:toXDelta="1%p" />
+
+    <translate
+        android:duration="110"
+        android:fromXDelta="0%p"
+        android:startOffset="150"
+        android:toXDelta="-2%p" />
+
+    <translate
+        android:duration="120"
+        android:fromXDelta="0%p"
+        android:startOffset="260"
+        android:toXDelta="2%p" />
+
+    <translate
+        android:duration="130"
+        android:fromXDelta="0%p"
+        android:startOffset="380"
+        android:toXDelta="-1.5%p" />
+
+    <translate
+        android:duration="140"
+        android:fromXDelta="0%p"
+        android:startOffset="510"
+        android:toXDelta=".5%p" />
+</set>
