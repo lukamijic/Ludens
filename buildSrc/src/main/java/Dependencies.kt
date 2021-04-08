@@ -68,5 +68,9 @@ object Dependencies {
         const val loaderAnnotationCompiler = "com.github.bumptech.glide:compiler:4.11.0"
     }
 
+    object Lottie {
+        const val lottie = "com.airbnb.android:lottie:3.7.0"
+    }
+
     const val timber = "com.jakewharton.timber:timber:4.7.1"
 }

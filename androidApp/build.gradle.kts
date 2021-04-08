@@ -35,6 +35,8 @@ dependencies {
 
     implementation(Dependencies.Image.loader)
     annotationProcessor(Dependencies.Image.loaderAnnotationCompiler)
+
+    implementation(Dependencies.Lottie.lottie)
 }
 
 val versionMajor = 1

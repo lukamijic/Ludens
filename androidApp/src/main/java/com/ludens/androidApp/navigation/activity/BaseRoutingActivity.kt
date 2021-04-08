@@ -3,6 +3,7 @@ package com.ludens.androidApp.navigation.activity
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ludens.androidApp.R
 import com.ludens.shared.navigation.Router
 import com.ludens.shared.navigation.RoutingActionConsumer
 import com.ludens.shared.navigation.RoutingActionsSource
