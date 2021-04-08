@@ -2,4 +2,8 @@
 <resources>
     <integer name="animation_duration_default">350</integer>
     <integer name="animation_duration_short">150</integer>
+
+    <integer name="logo_fall_duration">1250</integer>
+    <integer name="logo_fall_distance">600</integer>
+    <integer name="logo_letter_fall_delay">100</integer>
 </resources>

@@ -4,11 +4,4 @@
     <item
         android:drawable="@color/background_white"
         android:gravity="fill" />
-
-    <item
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:drawable="@drawable/bg_devices"
-        android:gravity="fill_horizontal|center"
-        android:scaleType="fitXY" />
 </layer-list>

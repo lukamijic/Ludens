@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FallingText">
+        <attr name="fallingText" format="string"/>
+        <attr name="fallingTextStyle" format="reference"/>
+        <attr name="fallDuration" format="integer"/>
+        <attr name="fallDistance" format="integer"/>
+        <attr name="letterFallDelay" format="integer"/>
+    </declare-styleable>
+</resources>
