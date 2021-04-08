@@ -1,11 +1,29 @@
 <resources>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/ludens_blue</item>
         <item name="colorPrimaryDark">@color/ludens_blue_dark</item>
         <item name="colorAccent">@color/ludens_orange</item>
 
         <item name="android:statusBarColor">@color/background_white</item>
+        <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <!-- Text Styles -->
+
+    <style name="Text">
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:textColor">@color/font_dark</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Logo">
+        <item name="android:fontFamily">@font/press_start_2p_regular</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/ludens_orange</item>
     </style>
 </resources>
