@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="ludens_orange">#F2A365</color>
+    <color name="ludens_blue">#30475E</color>
+    <color name="ludens_blue_dark">#222831</color>
+
+    <color name="background_white">#FFFFFF</color>
+
+    <color name="font_dark">#212121</color>
+    <color name="font_white">#FFFFFF</color>
+    <color name="font_dark_gray">#6B747B</color>
+    <color name="font_ash_gray">#C1C7D0</color>
+
+    <color name="button_color">@color/ludens_orange</color>
+
+    <color name="navigation_bar">@color/background_white</color>
 </resources>
