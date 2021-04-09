@@ -3,9 +3,7 @@ package com.ludens.androidApp.ui.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
-import android.view.animation.AccelerateInterpolator
 import android.view.animation.BounceInterpolator
-import android.view.animation.OvershootInterpolator
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.Nullable
@@ -20,7 +18,14 @@ private const val DEFAULT_LETTER_DELAY = 50L
 
 class FallingText : LinearLayout {
 
-    private lateinit var text: CharArray
+    var text = ""
+        set(value) {
+            field = value
+            letters = value.toCharArray()
+            initTextViews()
+        }
+
+    private lateinit var letters: CharArray
     private lateinit var textViews: List<TextView>
     private var textStyle: Int = DEFAULT_TEXT_STYLE
 
@@ -48,7 +53,7 @@ class FallingText : LinearLayout {
 
     private fun parseAttributes(attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) {
         attrs?.withTypedArray(context, R.styleable.FallingText, defStyleAttr) {
-            withString(R.styleable.FallingText_fallingText) { text = it.toCharArray() }
+            withString(R.styleable.FallingText_fallingText) { text = it }
             withInt(R.styleable.FallingText_fallDistance) { fallDistance = it.toFloat() }
             withInt(R.styleable.FallingText_fallDuration) { fallDuration = it.toLong() }
             withInt(R.styleable.FallingText_letterFallDelay) { fallLetterDelay = it.toLong() }
@@ -69,7 +74,7 @@ class FallingText : LinearLayout {
         removeAllViews()
 
         val newTextViews = mutableListOf<TextView>()
-        text.forEach {
+        letters.forEach {
             TextView(context).apply {
                 text = it.toString()
                 setTextAppearance(textStyle)
@@ -89,12 +94,14 @@ class FallingText : LinearLayout {
 
     fun fall() {
         var delay = 0L
+        textViews.forEach { it.makeInvisible() }
         textViews.forEach { textView ->
             val isLast = textViews.last() === textView
             val targetY = textView.y
             textView.y = textView.y - fallDistance
 
             textView.animate()
+                .withStartAction { textView.show() }
                 .withEndAction { if(isLast) onFallEndAction() }
                 .setDuration(fallDuration)
                 .setStartDelay(delay)

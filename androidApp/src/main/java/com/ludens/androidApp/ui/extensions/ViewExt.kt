@@ -20,6 +20,10 @@ fun View.show(shouldShow: Boolean = true) {
 
 fun View.hide() = show(false)
 
+fun View.makeInvisible() {
+    visibility = View.INVISIBLE
+}
+
 fun View.enable(isEnabled: Boolean = true) {
     this.isEnabled = isEnabled
 }
