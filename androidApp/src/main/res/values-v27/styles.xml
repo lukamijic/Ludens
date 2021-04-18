@@ -3,10 +3,10 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/ludens_blue</item>
         <item name="colorPrimaryDark">@color/ludens_blue_dark</item>
-        <item name="colorAccent">@color/ludens_orange</item>
+        <item name="colorAccent">@color/ludens_primary</item>
 
         <item name="android:windowLightStatusBar">@bool/isLightModeOn</item>
-        <item name="android:statusBarColor">@color/background_white</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
         <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:navigationBarColor">@color/navigation_bar</item>

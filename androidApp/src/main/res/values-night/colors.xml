@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ludens_orange">#F2A365</color>
-    <color name="background_white">#222831</color>
+    <color name="background">@color/ebony_clay</color>
+
+    <color name="font_primary">@color/white</color>
+    <color name="font_secondary">@color/ghost</color>
+
+    <color name="navigation_bar">@color/ebony_clay</color>
+    <color name="status_bar">@color/ebony_clay</color>
+
+    <!-- Sign Up -->
+    <color name="signup_continue_with_social_button_background">@color/pickled_bluewood</color>
+
+    <!-- Joystick Loader -->
+    <color name="joystick_loader_background">@color/ebony_clay_60</color>
 </resources>
