@@ -4,5 +4,7 @@ interface Router {
 
     fun showStart()
 
+    fun showSignUp()
+
     fun goBack()
 }

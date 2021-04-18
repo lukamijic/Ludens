@@ -20,5 +20,6 @@
         </activity>
 
         <activity android:name=".screen.start.StartActivity"/>
+        <activity android:name=".screen.signup.SignUpActivity"/>
     </application>
 </manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text sizes -->
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_32">32sp</dimen>
+    <dimen name="text_48">48sp</dimen>
+
+    <!-- Radius -->
+    <dimen name="radius_8">8dp</dimen>
+    <dimen name="radius_12">12dp</dimen>
+    <dimen name="radius_16">16dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_4">4dp</dimen>
+    <dimen name="elevation_8">8dp</dimen>
+    <dimen name="elevation_16">16dp</dimen>
+
+    <!-- Sign Up -->
+    <dimen name="sign_up_button_height">56dp</dimen>
+    <dimen name="sign_up_button_margin_horizontal">24dp</dimen>
+    <dimen name="sign_up_button_icon_margin_start">52dp</dimen>
+    <dimen name="sign_up_button_icon_margin_end">16dp</dimen>
+    <dimen name="sign_up_button_margin_top">12dp</dimen>
+    <dimen name="sign_up_login_margin_top">12dp</dimen>
+    <dimen name="sign_up_login_padding">4dp</dimen>
+    <dimen name="sign_up_TOS_margin_horizontal">24dp</dimen>
+    <dimen name="sign_up_TOS_margin_bottom">32dp</dimen>
+    <dimen name="sign_up_TOS_line_spacing">3dp</dimen>
+
+    <!-- JoystickLoader -->
+    <dimen name="joystick_loader_size">120dp</dimen>
+</resources>

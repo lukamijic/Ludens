@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Ludens</string>
+
+    <!-- Common -->
+
+    <!-- Sign Up -->
+    <string name="sign_up_discover_new_games">Discover New Games</string>
+    <string name="sign_up_continue_with_facebook">Continue with Facebook</string>
+    <string name="sign_up_continue_with_google">Continue with Google</string>
+    <string name="sign_up_continue_with_email">Continue with Email</string>
+    <string name="sign_up_already_have_an_account">Already have an account?</string>
+    <string name="sign_up_log_in">Log In</string>
+    <string name="sign_up_by_signing_up_you_agree_to_ludens">By signing up, you agree to Ludens’s</string>
+    <string name="sign_up_terms_of_use">Terms of Use</string>
+    <string name="sign_up_ampersand">&amp;</string>
+    <string name="sign_up_privacy_policy">Privacy Policy</string>
 </resources>

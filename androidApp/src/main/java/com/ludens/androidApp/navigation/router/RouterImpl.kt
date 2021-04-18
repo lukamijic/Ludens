@@ -2,6 +2,7 @@ package com.ludens.androidApp.navigation.router
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+import com.ludens.androidApp.screen.signup.SignUpActivity
 import com.ludens.androidApp.screen.start.StartActivity
 
 class RouterImpl(
@@ -12,6 +13,11 @@ class RouterImpl(
 
     override fun showStart() {
         activity.startActivity(StartActivity.createIntent(activity))
+        activity.finish()
+    }
+
+    override fun showSignUp() {
+        activity.startActivity(SignUpActivity.createIntent(activity))
         activity.finish()
     }
 

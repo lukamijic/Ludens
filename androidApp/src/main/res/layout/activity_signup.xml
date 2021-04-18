@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_devices"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/Text.Logo.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            style="@style/SignUpSubTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_discover_new_games"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
+
+        <LinearLayout
+            android:id="@+id/continue_with_facebook"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/sign_up_button_height"
+            android:layout_marginHorizontal="@dimen/sign_up_button_margin_horizontal"
+            android:background="@drawable/signup_continue_with_social_button_background"
+            android:elevation="@dimen/elevation_8"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.55">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/sign_up_button_icon_margin_start"
+                android:layout_marginEnd="@dimen/sign_up_button_icon_margin_end"
+                android:src="@drawable/ic_facebook" />
+
+            <TextView
+                style="@style/SignUpContinueButtonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/sign_up_continue_with_facebook" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/continue_with_google"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/sign_up_button_height"
+            android:layout_marginHorizontal="@dimen/sign_up_button_margin_horizontal"
+            android:layout_marginTop="@dimen/sign_up_button_margin_top"
+            android:background="@drawable/signup_continue_with_social_button_background"
+            android:elevation="@dimen/elevation_8"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_facebook">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/sign_up_button_icon_margin_start"
+                android:layout_marginEnd="@dimen/sign_up_button_icon_margin_end"
+                android:src="@drawable/ic_google" />
+
+            <TextView
+                style="@style/SignUpContinueButtonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/sign_up_continue_with_google" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/continue_with_email"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/sign_up_button_height"
+            android:layout_marginHorizontal="@dimen/sign_up_button_margin_horizontal"
+            android:layout_marginTop="@dimen/sign_up_button_margin_top"
+            android:background="@drawable/signup_continue_with_email_background"
+            android:elevation="@dimen/elevation_8"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_google">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/sign_up_button_icon_margin_start"
+                android:layout_marginEnd="@dimen/sign_up_button_icon_margin_end"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                style="@style/SignUpContinueEmailButtonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/sign_up_continue_with_email" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/log_in"
+            style="@style/SignUpLoginTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/sign_up_login_margin_top"
+            android:padding="@dimen/sign_up_login_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_email"
+            tools:text="Already have an account? Log In" />
+
+        <TextView
+            android:id="@+id/terms_and_services"
+            style="@style/SignUpTOSTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/sign_up_TOS_margin_horizontal"
+            android:layout_marginBottom="@dimen/sign_up_TOS_margin_bottom"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="By signing up, you agree to Ludens’s Terms of Use &amp; Privacy Policy" />
+
+        <com.ludens.androidApp.ui.view.JoystickLoader
+            android:id="@+id/joystick_loader"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="@dimen/elevation_16"
+            android:alpha="0"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:alpha="1"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -3,9 +3,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/ludens_blue</item>
         <item name="colorPrimaryDark">@color/ludens_blue_dark</item>
-        <item name="colorAccent">@color/ludens_orange</item>
+        <item name="colorAccent">@color/ludens_primary</item>
 
-        <item name="android:statusBarColor">@color/background_white</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
         <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
@@ -17,13 +17,70 @@
         <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textDirection">locale</item>
-        <item name="android:textColor">@color/font_dark</item>
+        <item name="android:textColor">@color/font_primary</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
     <style name="Text.Logo">
         <item name="android:fontFamily">@font/press_start_2p_regular</item>
-        <item name="android:textSize">48sp</item>
-        <item name="android:textColor">@color/ludens_orange</item>
+        <item name="android:textSize">@dimen/text_48</item>
+        <item name="android:textColor">@color/ludens_primary</item>
+    </style>
+
+    <style name="Text.Logo.Small">
+        <item name="android:fontFamily">@font/press_start_2p_regular</item>
+        <item name="android:textSize">@dimen/text_32</item>
+        <item name="android:textColor">@color/ludens_primary</item>
+    </style>
+
+    <style name="Text.12">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+
+    <style name="Text.14">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+
+    <style name="Text.16">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="Text.20">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+
+    <style name="Text.24">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+
+    <style name="Text.32">
+        <item name="android:textSize">@dimen/text_32</item>
+    </style>
+
+    <style name="Text.48">
+        <item name="android:textSize">@dimen/text_48</item>
+    </style>
+
+    <!-- Sign Up -->
+    <style name="SignUpSubTitleTextStyle" parent="Text.32">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="SignUpContinueButtonTextStyle" parent="Text.16">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="SignUpContinueEmailButtonTextStyle" parent="SignUpContinueButtonTextStyle">
+        <item name="android:textColor">@color/signup_continue_with_email_text</item>
+    </style>
+
+    <style name="SignUpLoginTextStyle" parent="Text.16">
+        <item name="android:textColor">@color/signup_login_text</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="SignUpTOSTextStyle" parent="Text.14">
+        <item name="android:textColor">@color/signup_tos_text</item>
+        <item name="android:lineSpacingExtra">@dimen/sign_up_TOS_line_spacing</item>
     </style>
 </resources>

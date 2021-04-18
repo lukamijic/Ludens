@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ludens_orange">#F2A365</color>
+    <color name="ludens_primary">#F2A365</color>
     <color name="ludens_blue">#30475E</color>
     <color name="ludens_blue_dark">#222831</color>
 
-    <color name="background_white">#FFFFFF</color>
+    <color name="background">@color/white</color>
 
-    <color name="font_dark">#212121</color>
-    <color name="font_white">#FFFFFF</color>
-    <color name="font_dark_gray">#6B747B</color>
-    <color name="font_ash_gray">#C1C7D0</color>
+    <color name="font_primary">@color/mine_shaft</color>
+    <color name="font_secondary">@color/pale_sky</color>
+    <color name="font_accent">@color/sandy_brown</color>
 
-    <color name="button_color">@color/ludens_orange</color>
+    <color name="navigation_bar">@color/white</color>
+    <color name="status_bar">@color/white</color>
 
-    <color name="navigation_bar">@color/background_white</color>
+    <!-- Sign Up -->
+    <color name="signup_continue_with_social_button_background">@color/athens_gray</color>
+    <color name="signup_continue_with_email_button_background">@color/sandy_brown</color>
+    <color name="signup_continue_with_email_text">@color/white</color>
+    <color name="signup_login_text">@color/font_secondary</color>
+    <color name="signup_login_text_accent">@color/font_accent</color>
+    <color name="signup_tos_text">@color/font_secondary</color>
+
+    <!-- Joystick Loader -->
+    <color name="joystick_loader_background">@color/white_60</color>
+
+    <!-- Colors - USE ONLY WITHIN colors.xml -->
+    <color name="white">#FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="sandy_brown">#F2A365</color>
+    <color name="pickled_bluewood">#30475E</color>
+    <color name="ebony_clay">#222831</color>
+    <color name="ebony_clay_60">#99222831</color>
+    <color name="mine_shaft">#212121</color>
+    <color name="pale_sky">#6B747B</color>
+    <color name="athens_gray">#F4F5F7</color>
+    <color name="ghost">#C1C7D0</color>
 </resources>
