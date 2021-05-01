@@ -21,6 +21,12 @@
     <color name="signup_login_text_accent">@color/font_accent</color>
     <color name="signup_tos_text">@color/font_secondary</color>
 
+    <!-- DashBoard -->
+    <color name="dashboard_background">@color/athens_gray</color>
+    <color name="dashboard_search_button_background">@color/sandy_brown</color>
+    <color name="dashboard_selected_color">@color/sandy_brown</color>
+    <color name="dashboard_unselected_color">@color/pale_sky</color>
+
     <!-- Joystick Loader -->
     <color name="joystick_loader_background">@color/white_60</color>
 
@@ -31,6 +37,7 @@
     <color name="pickled_bluewood">#30475E</color>
     <color name="ebony_clay">#222831</color>
     <color name="ebony_clay_60">#99222831</color>
+    <color name="mirage">#17212d</color>
     <color name="mine_shaft">#212121</color>
     <color name="pale_sky">#6B747B</color>
     <color name="athens_gray">#F4F5F7</color>

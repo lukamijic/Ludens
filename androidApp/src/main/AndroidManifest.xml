@@ -22,5 +22,6 @@
 
         <activity android:name=".screen.start.StartActivity"/>
         <activity android:name=".screen.signup.SignUpActivity"/>
+        <activity android:name=".screen.main.MainActivity"/>
     </application>
 </manifest>

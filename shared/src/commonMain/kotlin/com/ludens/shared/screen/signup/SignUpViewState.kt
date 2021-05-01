@@ -1,3 +1,3 @@
 package com.ludens.shared.screen.signup
 
-class SignUpViewState
+class SignUpViewState(val isLoading: Boolean)

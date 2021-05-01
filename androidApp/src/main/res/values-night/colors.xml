@@ -11,6 +11,10 @@
     <!-- Sign Up -->
     <color name="signup_continue_with_social_button_background">@color/pickled_bluewood</color>
 
+    <!-- Dashboard -->
+    <color name="dashboard_background">@color/mirage</color>
+    <color name="dashboard_unselected_color">@color/ghost</color>
+
     <!-- Joystick Loader -->
     <color name="joystick_loader_background">@color/ebony_clay_60</color>
 </resources>
