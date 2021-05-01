@@ -15,4 +15,8 @@
     <string name="sign_up_terms_of_use">Terms of Use</string>
     <string name="sign_up_ampersand">&amp;</string>
     <string name="sign_up_privacy_policy">Privacy Policy</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_item_home">Home</string>
+    <string name="dashboard_item_user">User</string>
 </resources>

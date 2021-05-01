@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:enterFadeDuration="@integer/animation_duration_default" android:exitFadeDuration="@integer/animation_duration_default">
+
+    <item android:drawable="@drawable/ic_user_selected" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_user_unselected" android:state_selected="false" />
+</selector>

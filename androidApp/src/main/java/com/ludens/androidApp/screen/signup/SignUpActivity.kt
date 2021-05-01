@@ -10,11 +10,13 @@ import androidx.core.text.inSpans
 import com.ludens.androidApp.R
 import com.ludens.androidApp.core.BaseActivity
 import com.ludens.androidApp.databinding.ActivitySignupBinding
+import com.ludens.androidApp.ui.extensions.fade
 import com.ludens.androidApp.ui.extensions.fadeIn
 import com.ludens.androidApp.ui.extensions.fadeOut
 import com.ludens.androidApp.ui.span.ClickSpan
 import com.ludens.shared.screen.signup.SignUpViewModel
 import com.ludens.shared.screen.signup.SignUpViewState
+import org.koin.android.ext.android.bind
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SignUpActivity : BaseActivity<SignUpViewState, ActivitySignupBinding>(ActivitySignupBinding::inflate) {
@@ -30,11 +32,13 @@ class SignUpActivity : BaseActivity<SignUpViewState, ActivitySignupBinding>(Acti
         setupLogin()
         setupTermsAndServices()
 
-        continueWithGoogle.setOnClickListener { joystickLoader.fadeIn() }
-        continueWithFacebook.setOnClickListener { joystickLoader.fadeIn() }
-        continueWithEmail.setOnClickListener { joystickLoader.fadeIn() }
+        continueWithGoogle.setOnClickListener { model.continueWithGoogle() }
+        continueWithFacebook.setOnClickListener { model.continueWithFacebook() }
+        continueWithEmail.setOnClickListener { model.continueWithEmail() }
+    }
 
-        joystickLoader.setOnClickListener { joystickLoader.fadeOut() }
+    override fun render(viewState: SignUpViewState) {
+        binding.joystickLoader.fade(viewState.isLoading)
     }
 
     private fun setupLogin() {
