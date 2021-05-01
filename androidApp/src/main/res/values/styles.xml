@@ -83,4 +83,10 @@
         <item name="android:textColor">@color/signup_tos_text</item>
         <item name="android:lineSpacingExtra">@dimen/sign_up_TOS_line_spacing</item>
     </style>
+
+
+    <!-- Dashboard -->
+    <style name="DashboardItemTextStyle" parent="Text.12">
+        <item name="android:color">@color/dashboard_item_selectable_color</item>
+    </style>
 </resources>

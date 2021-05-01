@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dashboard_tab_bar_height"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dashboard_tab_bar_background_height"
+        android:background="@drawable/bg_dashboard_tab_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_button"
+        android:layout_width="@dimen/dashboard_search_button_size"
+        android:layout_height="@dimen/dashboard_search_button_size"
+        android:background="@drawable/bg_dashboard_search_background"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/dashboard_search_button_margin_bottom"/>
+
+    <LinearLayout
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dashboard_item_padding_horizontal"
+        android:stateListAnimator="@animator/dashboard_tab_bar_item_animator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/search_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_home" />
+
+        <TextView
+            style="@style/DashboardItemTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/dashboard_item_home"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dashboard_item_padding_horizontal"
+        android:stateListAnimator="@animator/dashboard_tab_bar_item_animator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            style="@style/DashboardItemTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/dashboard_item_user"/>
+    </LinearLayout>
+</merge>
