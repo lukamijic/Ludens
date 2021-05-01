@@ -4,7 +4,7 @@ import com.ludens.shared.core.BaseViewModel
 import com.ludens.shared.navigation.RoutingActionsDispatcher
 
 class SignUpViewModel(
-    routingActionsDispatcher: RoutingActionsDispatcher,
+    routingActionsDispatcher: RoutingActionsDispatcher
 ) : BaseViewModel<SignUpViewState>(routingActionsDispatcher) {
 
     init {

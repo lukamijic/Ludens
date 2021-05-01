@@ -24,6 +24,10 @@ kotlin {
         }
     }
     sourceSets {
+        all {
+            languageSettings.enableLanguageFeature("InlineClasses")
+        }
+
         val commonMain by getting {
             dependencies {
                 implementation(Dependencies.Coroutines.core)

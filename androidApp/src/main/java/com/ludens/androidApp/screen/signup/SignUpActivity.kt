@@ -3,6 +3,7 @@ package com.ludens.androidApp.screen.signup
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import androidx.core.text.buildSpannedString
 import androidx.core.text.color
 import androidx.core.text.inSpans
@@ -61,5 +62,6 @@ class SignUpActivity : BaseActivity<SignUpViewState, ActivitySignupBinding>(Acti
                 }
             }
         }
+        binding.termsAndServices.movementMethod = LinkMovementMethod()
     }
 }
