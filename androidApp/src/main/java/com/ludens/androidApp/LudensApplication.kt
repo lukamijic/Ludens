@@ -13,6 +13,7 @@ import com.ludens.androidApp.feedback.haptic.HapticFeedbackImpl
 import com.ludens.androidApp.navigation.router.CloseableRouterContext
 import com.ludens.androidApp.navigation.router.CloseableRouterContextImpl
 import com.ludens.androidApp.navigation.router.RouterImpl
+import com.ludens.shared.core.BuildVariant
 import com.ludens.shared.di.initKoin
 import com.ludens.shared.navigation.Router
 import org.koin.android.ext.android.get
@@ -33,13 +34,26 @@ private fun createPlatformModule(application: Application) = module {
 
     single { application }
 
+    single {
+        when (BuildConfig.BUILD_TYPE) {
+            "debug" -> BuildVariant.Develop("Android", BuildConfig.VERSION_NAME)
+            "release" -> BuildVariant.Release("Android", BuildConfig.VERSION_NAME)
+            else -> throw IllegalStateException("Unknown build type: ${BuildConfig.BUILD_TYPE}")
+        }
+    }
+
+
     single<CloseableRouterContext> { CloseableRouterContextImpl() }
 
     single { listOf<AppConfig>(TimberAppConfig()) }
 
     factory<Router> { (activity: AppCompatActivity) ->
         val fragmentManager: FragmentManager = activity.supportFragmentManager
-        RouterImpl(activity = activity, fragmentManager = fragmentManager, closeableRouterContext = get())
+        RouterImpl(
+            activity = activity,
+            fragmentManager = fragmentManager,
+            closeableRouterContext = get()
+        )
     }
 
     single<Resources> { get<Application>().resources }
